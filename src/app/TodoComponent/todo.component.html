@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="skills">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <mat-form-field>
+    <mat-label>Skills</mat-label>
+    <mat-select
+      [formControl]="skills"
+      multiple
+      close
+      (change)="GetSkill($event.value)"
+      id="skillsListDll"
+    >
+      <mat-option *ngFor="let skill of skillsList" [value]="skill"
+        >{{skill}}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div id="level" style="display: none;">
+  <mat-form-field>
+    <mat-label id="lvlExpPlaceHolder">Level of experience</mat-label>
+    <mat-select (change)="bindToSkill($event.value)" id="lvlExp">
+      <mat-option
+        id="lvlExpOption"
+        *ngFor="let exp of levelOfExperience"
+        [value]="exp"
+      >
+        {{exp}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

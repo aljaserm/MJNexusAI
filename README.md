@@ -1,2 +1,0 @@
-# MJNexusAI
-Created with CodeSandbox
